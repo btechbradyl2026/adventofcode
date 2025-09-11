@@ -1,10 +1,11 @@
+import java.util.Collections;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
-
+    int count = 0;
     ArrayList a1 = new ArrayList<Integer>();
     ArrayList a2 = new ArrayList<Integer>();
     try {
@@ -23,8 +24,11 @@ public class Main {
         System.out.println(a1);
         System.out.println(a2);
 
-        for (int i = 0; i <a1.size(); i ++) {
-            System.out.print(a1.);
+        Collections.sort(a1);
+        Collections.sort(a2);
+
+        for (int i = 0; i < a1.size(); i ++) {
+            count += a1.get(i) - a2.get(i);
         }
     }
 }
