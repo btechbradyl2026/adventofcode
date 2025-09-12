@@ -28,7 +28,14 @@ public class Main {
         Collections.sort(a2);
 
         for (int i = 0; i < a1.size(); i ++) {
-            count += a1.get(i) - a2.get(i);
+            int c1 = 0;
+            for (int j = 0; j < a2.size(); j++) {
+                if ( (int) a1.get(i) == (int) a2.get(j) ) {
+                    c1 ++;
+                }
+            }
+            count += ((int) a1.get(i) * c1);
         }
+        System.out.println(count);
     }
 }
